@@ -1,0 +1,50 @@
+entity Produit {
+	
+	code String maxlength(40) required,
+    marque String required maxlength(70),
+    modele String maxlength(100) required,
+	caracteristiques String maxlength(100) required,
+    prixUnitaire BigDecimal required,
+    quantite Long required
+}
+entity Client {
+	code String minlength(2) maxlength(20) required,
+    nom String minlength(2) maxlength(30)  required,
+    prenom String minlength(2) maxlength(30) required,
+    dateNaissance LocalDate  required,
+    adresse String minlength(2) maxlength(50) required,
+    ville String minlength(2) maxlength(30) required,
+    codePostal Long required,
+    tel String minlength(6) maxlength(30) ,
+    fax String minlength(6) maxlength(30) ,
+    gsm String minlength(6) maxlength(30) required,
+    email String minlength(6) maxlength(30) required
+}
+
+entity Categorie {
+	code String required,
+    libelle String required 
+}
+entity Commande {
+	numero String minlength(2) maxlength(30) required,
+	date LocalDate required,
+	prixTotal BigDecimal required,
+    etat Long required 
+}
+entity CarnetCommande {
+	qte Long required,
+    prixUnitaire BigDecimal required,
+	prixTotal BigDecimal required,
+    etat Long required 
+}
+relationship OneToMany {
+	Client{commande} to Commande{client},
+    Categorie{produit} to Produit{categorie},
+	Produit{carnet} to CarnetCommande{produit},
+	Commande{carnet} to CarnetCommande{commande}
+}
+// Set pagination options
+paginate * with pagination
+service * with serviceClass except User
+// Set an angular suffix
+// Set angularSuffix * with 
