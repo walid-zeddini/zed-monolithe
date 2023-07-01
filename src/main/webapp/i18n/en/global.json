@@ -8,7 +8,7 @@
       "mygithub": "Source code of ZED MONOLITHE is on available on ",
       "about": "About",
       "fyi": "FYI",
-      "messagefyi": "MONOLITH STACK: Angular,Spring Boot,Spring Security, JWT, API REST & PostgreSQL.COMPONENTS - MICROSERVICES: two Microservices  with two diffents Datasources. SwaggerUI, KeyCloak, Circuit Breaker, Open Fein et Resilience4J:",
+      "messagefyi": "MONOLITH STACK: Angular,Spring Boot,Spring Security, JWT, API REST, PostgreSQL, generator JHipster.<br>COMPONENTS - MICROSERVICES: two Microservices  with two diffents Datasources. SwaggerUI, KeyCloak, Circuit Breaker, Open Fein et Resilience4J:",
       "componentsfyi": "In addition to these two micoservices, there are also API Gateway “Spring Cloud Gateway” and Discovery Service “Spring Cloud Netflix-Eureka” :"
     },
     "title": "ZED MONOLITHE :)",
