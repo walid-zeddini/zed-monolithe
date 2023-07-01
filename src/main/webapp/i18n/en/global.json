@@ -66,7 +66,7 @@
         "authenticated": {
           "prefix": "If you want to ",
           "link": "sign in",
-          "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"zedadmin\" and password=\"zed\") <br/>- User (login=\"zeduser\" and password=\"zed\")."
+          "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"zedadmin\" and password=\"zed123*\") <br/>- User (login=\"zeduser\" and password=\"zed123*\")."
         },
         "register": {
           "noaccount": "You don't have an account yet?",
