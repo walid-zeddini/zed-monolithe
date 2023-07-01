@@ -32,9 +32,12 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/DB_ZED_MONOLITHE
-    username: zedgres
-    password: zedgres
+    url: jdbc:postgresql://ec2-34-242-199-141.eu-west-1.compute.amazonaws.com:5432/daes4s2iis3sfl
+    username: jhdlhfolfsmtip
+    password: b3a407dedaf1ee31c8b3387b8a3ef2d0f9890347587d5caf48b4ed581c6a5313
+    # url: jdbc:postgresql://localhost:5432/DB_ZED_MONOLITHE
+    # username: zedgres
+    # password: zedgres
     hikari:
       poolName: Hikari
       auto-commit: false
