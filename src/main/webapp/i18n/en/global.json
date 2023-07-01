@@ -1,12 +1,28 @@
 {
   "global": {
-    "title": "ZedMonolithe",
+    "zeddini": {
+      "gettoknow": "Get to know :)",
+      "name": "Waleed Zeddini",
+      "briefme": "In Breif, who I'm ?",
+      "end": "Finally, an Overview on my Courses 2022 !",
+      "mygithub": "Source code of ZED MONOLITHE is on available on ",
+      "about": "About",
+      "fyi": "FYI",
+      "messagefyi": "MONOLITH STACK: Angular,Spring Boot,Spring Security, JWT, API REST & PostgreSQL.COMPONENTS - MICROSERVICES: two Microservices  with two diffents Datasources. SwaggerUI, KeyCloak, Circuit Breaker, Open Fein et Resilience4J:",
+      "componentsfyi": "In addition to these two micoservices, there are also API Gateway “Spring Cloud Gateway” and Discovery Service “Spring Cloud Netflix-Eureka” :"
+    },
+    "title": "ZED MONOLITHE :)",
     "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
     "menu": {
       "home": "Home",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
+        "main": "Services",
+        "produit": "Product",
+        "client": "Client",
+        "categorie": "Category",
+        "commande": "Order",
+        "carnetCommande": "Order Lines",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -26,6 +42,7 @@
         "health": "Health",
         "configuration": "Configuration",
         "logs": "Logs",
+        "audits": "Audits",
         "apidocs": "API",
         "database": "Database",
         "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
@@ -49,7 +66,7 @@
         "authenticated": {
           "prefix": "If you want to ",
           "link": "sign in",
-          "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+          "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"zedadmin\" and password=\"zed\") <br/>- User (login=\"zeduser\" and password=\"zed\")."
         },
         "register": {
           "noaccount": "You don't have an account yet?",
@@ -97,8 +114,7 @@
       "edit": "Edit",
       "open": "Open",
       "save": "Save",
-      "view": "View",
-      "show": "Show {{otherEntity}}"
+      "view": "View"
     },
     "detail": {
       "field": "Field",
@@ -119,11 +135,6 @@
       "number": "This field should be a number.",
       "datetimelocal": "This field should be a date and time.",
       "patternLogin": "This field can only contain letters, digits and e-mail addresses."
-    },
-    "filters": {
-      "set": "Following filters are set",
-      "clear": "Clear filter",
-      "clearAll": "Clear all filters"
     }
   },
   "error": {
@@ -136,8 +147,6 @@
     "emailexists": "Email is already in use!",
     "idexists": "A new {{ entityName }} cannot already have an ID",
     "idnull": "Invalid ID",
-    "idinvalid": "Invalid ID",
-    "idnotfound": "ID cannot be found",
     "file": {
       "could.not.extract": "Could not extract file",
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""

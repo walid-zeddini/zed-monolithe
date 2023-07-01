@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="commande">
+      <h2 data-cy="commandeDetailsHeading"><span jhiTranslate="zedMonolitheApp.commande.detail.title">Commande</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ commande.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.commande.numero">Numero</span></dt>
+        <dd>
+          <span>{{ commande.numero }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.commande.date">Date</span></dt>
+        <dd>
+          <span>{{ commande.date | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.commande.prixTotal">Prix Total</span></dt>
+        <dd>
+          <span>{{ commande.prixTotal }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.commande.etat">Etat</span></dt>
+        <dd>
+          <span>{{ commande.etat }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.commande.client">Client</span></dt>
+        <dd>
+          <div *ngIf="commande.client">
+            <a [routerLink]="['/client', commande.client.id, 'view']">{{ commande.client.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/commande', commande.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,28 @@
 {
   "global": {
-    "title": "ZedMonolithe",
+    "zeddini": {
+      "gettoknow": "Pour faire connaissance:)",
+      "name": "Walid Zeddini",
+      "briefme": "En bref, qui suis je ?",
+      "end": "Enfin, un petit aperçu sur mes Cours 2022 !",
+      "mygithub": "Le code source de ZED MONOLITHE se trouve sur le",
+      "about": "A Propos",
+      "fyi": "Pour INFO ",
+      "messagefyi": "STACK MONOLITHE: Angular,Spring Boot,Spring Security, JWT, API REST et PostgreSQL.<br> COMPOSANTS - MICROSERVICES : Deux Microservices autonomes avec deux Datasource différentes, SwaggerUI, KeyCloak, Circuit Breaker, Open Fein et Resilience4J:",
+      "componentsfyi": "En plus de ces deux micoservices, il y a aussi API passerelle ou API Gateway “Spring Cloud Gateway” et Service de découverte ou Service Discovery “Spring Cloud Netflix-Eureka”:"
+    },
+    "title": "ZED MONOLITHE :) ",
     "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
     "menu": {
       "home": "Accueil",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entités",
+        "main": "Services",
+        "produit": "Produit",
+        "client": "Client",
+        "categorie": "Catégorie",
+        "commande": "Commande",
+        "carnetCommande": "Lignes Commande",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -26,6 +42,7 @@
         "health": "Diagnostics",
         "configuration": "Configuration",
         "logs": "Logs",
+        "audits": "Audits",
         "apidocs": "API",
         "database": "Base de données",
         "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
@@ -49,7 +66,7 @@
         "authenticated": {
           "prefix": "Si vous voulez vous ",
           "link": "connecter",
-          "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"admin\" et mot de passe =\"admin\") <br/> - Utilisateur (nom d'utilisateur=\"user\" et mot de passe =\"user\")."
+          "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"zedadmin\" et mot de passe =\"zed\") <br/> - Utilisateur (nom d'utilisateur=\"zeduser\" et mot de passe =\"zed\")."
         },
         "register": {
           "noaccount": "Vous n'avez pas encore de compte ?",
@@ -97,8 +114,7 @@
       "delete": "Supprimer",
       "open": "Ouvrir",
       "save": "Sauvegarder",
-      "view": "Voir",
-      "show": "Show {{otherEntity}}"
+      "view": "Voir"
     },
     "detail": {
       "field": "Champs",
@@ -119,11 +135,6 @@
       "number": "Ce champ doit être un nombre.",
       "datetimelocal": "Ce champ doit être une date et une heure.",
       "patternLogin": "Ce champ ne peut contenir que des lettres, des chiffres ou des adresses e-mail."
-    },
-    "filters": {
-      "set": "Following filters are set",
-      "clear": "Clear filter",
-      "clearAll": "Clear all filters"
     }
   },
   "error": {
@@ -136,8 +147,6 @@
     "emailexists": "Email déjà utilisé !",
     "idexists": "Une nouvelle entité {{entityName}} ne peut pas avoir d'identifiant !",
     "idnull": "Identifiant invalide",
-    "idinvalid": "Invalid Id",
-    "idnotfound": "ID cannot be found",
     "file": {
       "could.not.extract": "Impossible d'extraire le fichier",
       "not.image": "Le fichier doit être une image et non du type \"{{ fileType }}\""

@@ -48,6 +48,15 @@ public class CacheConfiguration {
             createCache(cm, com.zeddini.monolithe.domain.User.class.getName());
             createCache(cm, com.zeddini.monolithe.domain.Authority.class.getName());
             createCache(cm, com.zeddini.monolithe.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.zeddini.monolithe.domain.Produit.class.getName());
+            createCache(cm, com.zeddini.monolithe.domain.Produit.class.getName() + ".carnets");
+            createCache(cm, com.zeddini.monolithe.domain.Client.class.getName());
+            createCache(cm, com.zeddini.monolithe.domain.Client.class.getName() + ".commandes");
+            createCache(cm, com.zeddini.monolithe.domain.Categorie.class.getName());
+            createCache(cm, com.zeddini.monolithe.domain.Categorie.class.getName() + ".produits");
+            createCache(cm, com.zeddini.monolithe.domain.Commande.class.getName());
+            createCache(cm, com.zeddini.monolithe.domain.Commande.class.getName() + ".carnets");
+            createCache(cm, com.zeddini.monolithe.domain.CarnetCommande.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

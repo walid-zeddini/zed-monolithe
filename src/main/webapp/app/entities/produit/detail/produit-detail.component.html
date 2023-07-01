@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="produit">
+      <h2 data-cy="produitDetailsHeading"><span jhiTranslate="zedMonolitheApp.produit.detail.title">Produit</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ produit.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.code">Code</span></dt>
+        <dd>
+          <span>{{ produit.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.marque">Marque</span></dt>
+        <dd>
+          <span>{{ produit.marque }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.modele">Modele</span></dt>
+        <dd>
+          <span>{{ produit.modele }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.caracteristiques">Caracteristiques</span></dt>
+        <dd>
+          <span>{{ produit.caracteristiques }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.prixUnitaire">Prix Unitaire</span></dt>
+        <dd>
+          <span>{{ produit.prixUnitaire }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.quantite">Quantite</span></dt>
+        <dd>
+          <span>{{ produit.quantite }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.categorie">Categorie</span></dt>
+        <dd>
+          <div *ngIf="produit.categorie">
+            <a [routerLink]="['/categorie', produit.categorie.id, 'view']">{{ produit.categorie.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/produit', produit.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

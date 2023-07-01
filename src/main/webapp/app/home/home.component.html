@@ -4,76 +4,72 @@
   </div>
 
   <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title">Bienvenue, Java Hipster !</span> (Zed Monolithe)</h1>
+    <h1 class="display-4" jhiTranslate="home.title">Welcome</h1>
 
-    <p class="lead" jhiTranslate="home.subtitle">Ceci est votre page d'accueil</p>
-
+    <!--         <p class="lead" jhiTranslate="home.subtitle">This is the homepage</p>
+ -->
     <div [ngSwitch]="account !== null">
       <div class="alert alert-success" *ngSwitchCase="true">
         <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message" [translateValues]="{ username: account.login }"
-          >Vous êtes connecté en tant que "{{ account.login }}".</span
+          >You are logged in as user "{{ account.login }}".</span
         >
       </div>
 
       <div class="alert alert-warning" *ngSwitchCase="false">
-        <span jhiTranslate="global.messages.info.authenticated.prefix">Si vous voulez vous </span>
-        <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">connecter</a
+        <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
+        <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a
         ><span jhiTranslate="global.messages.info.authenticated.suffix"
-          >, vous pouvez utiliser les comptes par défaut : <br />
-          - Administrateur (nom d'utilisateur="admin" et mot de passe ="admin") <br />
-          - Utilisateur (nom d'utilisateur="user" et mot de passe ="user").</span
+          >, you can try the default accounts:<br />- Administrator (login="zedadmin" and password="zed") <br />- User (login="zeduser" and
+          password="zed").</span
         >
       </div>
 
       <div class="alert alert-warning" *ngSwitchCase="false">
-        <span jhiTranslate="global.messages.info.register.noaccount">Vous n'avez pas encore de compte ?</span>&nbsp;
-        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Créer un compte</a>
+        <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&nbsp;
+        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-1 col-md-3 item"></div>
+      <div class="col-md-11 item text">
+        <h3 jhiTranslate="global.zeddini.fyi">Pour Info</h3>
+        <p jhiTranslate="global.zeddini.messagefyi">
+          Angular et la partie Back avec Spring Boot en utilisant JWT et Spring Security et bien évidemment le REST avec une base
+          PostgreSQL. La version Microservice et OAuth2 (Serveur KeyCloak) est disponible avec Swagger UI. Deux Microservices autonomes avec
+          deux Datasource (BD) différentes. Circuit Breaker, Open Fein et Resilience4J:
+        </p>
+        <div>
+          <ul>
+            <li>
+              <a href="https://github.com/Walid-Zeddini/zed-order-service" target="_blank" rel="noopener noreferrer"
+                >Git - Microservice order-service</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Walid-Zeddini/zed-stock-service" target="_blank" rel="noopener noreferrer"
+                >Git - Microservice stock-service</a
+              >
+            </li>
+          </ul>
+        </div>
 
-    <p jhiTranslate="home.question">Si vous avez des questions à propos de JHipster :</p>
-
-    <ul>
-      <li>
-        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage"
-          >Page d'accueil de JHipster</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/tags/jhipster/info"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.stackoverflow"
-          >JHipster sur Stack Overflow</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.bugtracker"
-          >JHipster bug tracker</a
-        >
-      </li>
-      <li>
-        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"
-          >JHipster public chat room</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"
-          >Suivez @jhipster sur Twitter</a
-        >
-      </li>
-    </ul>
-
-    <p>
-      <span jhiTranslate="home.like">Si vous aimez JHipster, donnez nous une étoile sur</span>
-      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"
-        >GitHub </a
-      >!
-    </p>
+        <p jhiTranslate="global.zeddini.componentsfyi">
+          En plus des deux micoservices ci-dessus, il y a aussi API passerelle ou API Gateway “Spring Cloud Gateway” et Service de
+          découverte ou Service Discovery “Spring Cloud Netflix-Eureka”:
+        </p>
+        <div>
+          <ul>
+            <li>
+              <a href="https://github.com/Walid-Zeddini/zed-gateway-routing" target="_blank" rel="noopener noreferrer">Git - API Gateway</a>
+            </li>
+            <li>
+              <a href="https://github.com/Walid-Zeddini/zed-register-eureka-server" target="_blank" rel="noopener noreferrer"
+                >Git - Discovery Service</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

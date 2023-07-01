@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="carnetCommande">
+      <h2 data-cy="carnetCommandeDetailsHeading">
+        <span jhiTranslate="zedMonolitheApp.carnetCommande.detail.title">Carnet Commande</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ carnetCommande.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.qte">Qte</span></dt>
+        <dd>
+          <span>{{ carnetCommande.qte }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.prixUnitaire">Prix Unitaire</span></dt>
+        <dd>
+          <span>{{ carnetCommande.prixUnitaire }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.prixTotal">Prix Total</span></dt>
+        <dd>
+          <span>{{ carnetCommande.prixTotal }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.etat">Etat</span></dt>
+        <dd>
+          <span>{{ carnetCommande.etat }}</span>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.produit">Produit</span></dt>
+        <dd>
+          <div *ngIf="carnetCommande.produit">
+            <a [routerLink]="['/produit', carnetCommande.produit.id, 'view']">{{ carnetCommande.produit.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="zedMonolitheApp.carnetCommande.commande">Commande</span></dt>
+        <dd>
+          <div *ngIf="carnetCommande.commande">
+            <a [routerLink]="['/commande', carnetCommande.commande.id, 'view']">{{ carnetCommande.commande.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/carnet-commande', carnetCommande.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

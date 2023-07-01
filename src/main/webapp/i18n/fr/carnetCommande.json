@@ -1,0 +1,29 @@
+{
+  "zedMonolitheApp": {
+    "carnetCommande": {
+      "home": {
+        "title": "CarnetCommandes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Carnet Commande",
+        "createOrEditLabel": "Créer ou éditer un Carnet Commande",
+        "notFound": "Aucun Carnet Commande trouvé"
+      },
+      "created": "Un nouveau Carnet Commande a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Carnet Commande avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Carnet Commande avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Carnet Commande {{ id }} ?"
+      },
+      "detail": {
+        "title": "Carnet Commande"
+      },
+      "id": "ID",
+      "qte": "Qte",
+      "prixUnitaire": "Prix Unitaire",
+      "prixTotal": "Prix Total",
+      "etat": "Etat",
+      "produit": "Produit",
+      "commande": "Commande"
+    }
+  }
+}
