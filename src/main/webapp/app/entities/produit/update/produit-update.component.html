@@ -50,7 +50,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.modele" for="field_modele">Modele</label>
+          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.modele" for="field_modele">Modèle</label>
           <input type="text" class="form-control" name="modele" id="field_modele" data-cy="modele" formControlName="modele" />
           <div *ngIf="editForm.get('modele')!.invalid && (editForm.get('modele')!.dirty || editForm.get('modele')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('modele')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -68,9 +68,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.caracteristiques" for="field_caracteristiques"
-            >Caracteristiques</label
-          >
+          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.caracteristiques" for="field_caracteristiques">Artcile</label>
           <input
             type="text"
             class="form-control"
@@ -134,7 +132,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.quantite" for="field_quantite">Quantite</label>
+          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.quantite" for="field_quantite">Quantité</label>
           <input type="number" class="form-control" name="quantite" id="field_quantite" data-cy="quantite" formControlName="quantite" />
           <div *ngIf="editForm.get('quantite')!.invalid && (editForm.get('quantite')!.dirty || editForm.get('quantite')!.touched)">
             <small
@@ -155,7 +153,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.categorie" for="field_categorie">Categorie</label>
+          <label class="form-label" jhiTranslate="zedMonolitheApp.produit.categorie" for="field_categorie">Catégorie</label>
           <select
             class="form-control"
             id="field_categorie"
@@ -165,7 +163,9 @@
             [compareWith]="compareCategorie"
           >
             <option [ngValue]="null"></option>
-            <option [ngValue]="categorieOption" *ngFor="let categorieOption of categoriesSharedCollection">{{ categorieOption.id }}</option>
+            <option [ngValue]="categorieOption" *ngFor="let categorieOption of categoriesSharedCollection">
+              {{ categorieOption.id }} {{ categorieOption.code }} - {{ categorieOption.libelle }}
+            </option>
           </select>
         </div>
       </div>

@@ -52,13 +52,13 @@
           </th>
           <th scope="col" jhiSortBy="modele">
             <div class="d-flex">
-              <span jhiTranslate="zedMonolitheApp.produit.modele">Modele</span>
+              <span jhiTranslate="zedMonolitheApp.produit.modele">Modèle</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
           <th scope="col" jhiSortBy="caracteristiques">
             <div class="d-flex">
-              <span jhiTranslate="zedMonolitheApp.produit.caracteristiques">Caracteristiques</span>
+              <span jhiTranslate="zedMonolitheApp.produit.caracteristiques">Article</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -70,13 +70,13 @@
           </th>
           <th scope="col" jhiSortBy="quantite">
             <div class="d-flex">
-              <span jhiTranslate="zedMonolitheApp.produit.quantite">Quantite</span>
+              <span jhiTranslate="zedMonolitheApp.produit.quantite">Quantité</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
           <th scope="col" jhiSortBy="categorie.id">
             <div class="d-flex">
-              <span jhiTranslate="zedMonolitheApp.produit.categorie">Categorie</span>
+              <span jhiTranslate="zedMonolitheApp.produit.categorie">Catégorie</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -96,7 +96,9 @@
           <td>{{ produit.quantite }}</td>
           <td>
             <div *ngIf="produit.categorie">
-              <a [routerLink]="['/categorie', produit.categorie.id, 'view']">{{ produit.categorie.id }}</a>
+              <a [routerLink]="['/categorie', produit.categorie.id, 'view']"
+                >{{ produit.categorie.id }} {{ produit.categorie.code }} - {{ produit.categorie.libelle }}</a
+              >
             </div>
           </td>
           <td class="text-end">

@@ -26,7 +26,7 @@
         <dd>
           <span>{{ produit.modele }}</span>
         </dd>
-        <dt><span jhiTranslate="zedMonolitheApp.produit.caracteristiques">Caracteristiques</span></dt>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.caracteristiques">Article</span></dt>
         <dd>
           <span>{{ produit.caracteristiques }}</span>
         </dd>
@@ -38,11 +38,11 @@
         <dd>
           <span>{{ produit.quantite }}</span>
         </dd>
-        <dt><span jhiTranslate="zedMonolitheApp.produit.categorie">Categorie</span></dt>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.categorie">Catégorie</span></dt>
         <dd>
           <div *ngIf="produit.categorie">
             <a [routerLink]="['/categorie', produit.categorie.id, 'view']"
-              >{{ produit.categorie.code }} -{{ produit.categorie.libelle }}
+              >{{ produit.categorie.id }} {{ produit.categorie.code }} - {{ produit.categorie.libelle }}
             </a>
           </div>
         </dd>
