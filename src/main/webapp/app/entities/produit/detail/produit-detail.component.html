@@ -34,14 +34,14 @@
         <dd>
           <span>{{ produit.prixUnitaire }}</span>
         </dd>
-        <dt><span jhiTranslate="zedMonolitheApp.produit.quantite">Quantite</span></dt>
+        <dt><span jhiTranslate="zedMonolitheApp.produit.quantite">Quantité</span></dt>
         <dd>
           <span>{{ produit.quantite }}</span>
         </dd>
         <dt><span jhiTranslate="zedMonolitheApp.produit.categorie">Catégorie</span></dt>
         <dd>
           <div *ngIf="produit.categorie">
-            <a [routerLink]="['/categorie', produit.categorie?.id, 'view']">{{ produit.categorie?.libelle }} </a>
+            <a [routerLink]="['/categorie', produit.categorie.id, 'view']">{{ produit.categorie.id }} </a>
           </div>
         </dd>
       </dl>
