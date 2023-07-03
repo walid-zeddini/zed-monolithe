@@ -96,7 +96,7 @@
           <td>{{ produit.quantite }}</td>
           <td>
             <div *ngIf="produit.categorie">
-              <a [routerLink]="['/categorie', produit.categorie.libelle, 'view']">{{ produit.categorie.id }} </a>
+              <a [routerLink]="['/categorie', produit.categorie.id, 'view']">{{ produit.categorie.id }} </a>
             </div>
           </td>
           <td class="text-end">

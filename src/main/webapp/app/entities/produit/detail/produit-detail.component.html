@@ -41,7 +41,7 @@
         <dt><span jhiTranslate="zedMonolitheApp.produit.categorie">Catégorie</span></dt>
         <dd>
           <div *ngIf="produit.categorie">
-            <a [routerLink]="['/categorie', produit.categorie.libelle, 'view']">{{ produit.categorie.id }} </a>
+            <a [routerLink]="['/categorie', produit.categorie.id, 'view']">{{ produit.categorie.id }} </a>
           </div>
         </dd>
       </dl>
